@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Urbanist", sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+
+:root{
+    --header-color- : #4B5945;
+    --bg-color-- : #66785F;
+    --fs-color--: #F3F3E0;
+    --btn-color--: rgb(218, 21, 21);
+}
+
+body{
+    background: var(--bg-color--);
+}
+
+.container{
+    max-width: 142rem;
+    margin: 0 auto;
+    padding: 1rem 9rem ;
+}
+
+header{
+    background-color: var(--header-color-);
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1{
+    font-size: 3rem;
+    letter-spacing: 0.1rem;
+    color: var(--fs-color--);
+}
+
+form{
+    padding: 0.5rem;
+}
+
+nav form input[type="text"],button[type="submit"]{
+    font-size: 1.7rem;
+    border: none;
+    padding: 0.5rem 0.8rem;
+    cursor: pointer;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+
+nav form button{
+    margin: 1rem 0 0 1rem;
+    font-weight: 700;
+    background: var(--btn-color--);
+    transition: background-color 0.2s ease-in-out;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    -moz-transition: background-color 0.2s ease-in-out;
+    -ms-transition: background-color 0.2s ease-in-out;
+    -o-transition: background-color 0.2s ease-in-out;
+}
+
+nav form button:hover{
+    background-color: rgb(254, 4, 29);
+}
+
+
+
+
+
+/* Main */
+main .heading{
+    color: var(--fs-color--);
+    text-align: center;
+    font-size: 2rem;
+}
+
+.recipeContainer{
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+    cursor: pointer;
+    place-items: center;
+}
+
+.recipeItem{
+    background-color: #F3F3E0;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    text-align: start;
+    padding-bottom: 1rem;
+    max-width: 30rem;
+    border-radius: 0.3rem;
+    -webkit-border-radius: 0.3rem;
+    -moz-border-radius: 0.3rem;
+    -ms-border-radius: 0.3rem;
+    -o-border-radius: 0.3rem;
+
+
+    &{
+
+    }
+}
+
+.recipeItem img{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (width < 768px){
+    nav{
+        flex-direction: column;
+    }
+    .container{
+        padding: 1rem 5rem ;
+    }
+}
+
+
+@media (width < 430px){
+    .container{
+        padding: 1rem 0 ;
+    }
+
+    nav form input[type="text"],button[type="button"]{
+        padding: auto;
+    }
+
+    nav form button{
+        margin-left: 0;
+    }
+   
+}
+
+@media (width < 330px){
+    html{
+        font-size: 50%;
+    }
+
+    nav{
+        align-items: start;
+    }
+}
+
