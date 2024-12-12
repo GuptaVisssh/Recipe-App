@@ -1,3 +1,8 @@
+// import AOS from 'aos';
+// import 'aos/dist/aos.css'; // You can also use <link> for styles
+// // ..
+// AOS.init();
+
 const searchBox = document.querySelector(".searchBox")
 const searchBtn = document.querySelector(".searchBtn")
 const recipeContainer = document.querySelector(".recipeContainer")
@@ -16,7 +21,7 @@ const fetchRecipes = async(query) =>{
             const recipeDiv = document.createElement("div")
             recipeDiv.classList.add("recipeItem")
             recipeDiv.innerHTML = `
-                <img src="${meal.strMealThumb}">
+                <img src="${meal.strMealThumb}" >
                 <h2>${meal.strMeal}</h2>
                 <p><span>${meal.strArea}</span> Dish</p>
                 <p>Belongs to <span>${meal.strCategory} </span> Category</p>
@@ -69,7 +74,7 @@ const openRecipePopup =(meal)=>{
         <h3 class="instructions">Instructions:</h3>
         <p>${meal.strInstructions}</p>
     </div>
-    
+
     `
 
     recipeDetails.parentElement.style.display = 'block'
